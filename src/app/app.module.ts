@@ -13,6 +13,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { SinfotoPipe } from './pipes/sinfoto.pipe';
+import { ArtistaComponent } from './components/artista/artista.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SinfotoPipe } from './pipes/sinfoto.pipe';
     HomeComponent,
     SearchComponent,
     NavbarComponent,
-    SinfotoPipe
+    SinfotoPipe,
+    ArtistaComponent
   ],
   imports: [
     BrowserModule,
