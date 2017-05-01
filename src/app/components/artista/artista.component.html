@@ -30,6 +30,7 @@
                       <th>Foto</th>
                       <th>Cancion</th>
                       <th>Popularidad</th>
+                      <th>URI</th>
                       <th>Preview</th>
                   </tr>
                 </thead>
@@ -37,14 +38,16 @@
                     <tr *ngFor = "let pista of pistas; let i = index;" >
                       <td>{{i + 1}}</td>
                       <td><img [src]="pista.album?.images | sinfoto" alt=""
-                      class="img-fluid img-rounded img-50"></td>
+                      class="img-fluid img-50"></td>
                       <td>{{pista.name}}</td>
                       <td>{{pista.popularity}}%</td>
+                      <td>{{pista.uri}}</td>
                       <td>
-                        <audio controls >
+                        <iframe [src]="pista.uri | domseguro:'https://open.spotify.com/embed?uri='" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+                        <!--<audio controls >
                           <source [src] = "pista.preview_url">
                           Tu navegador es muy viejo
-                        </audio>
+                        </audio>-->
                       </td>
                     </tr>
                 </tbody>
